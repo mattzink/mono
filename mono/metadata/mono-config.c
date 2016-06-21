@@ -277,21 +277,9 @@ dllmap_start (gpointer user_data,
 		for (i = 0; attribute_names [i]; ++i) {
 			if (strcmp (attribute_names [i], "dll") == 0)
 				info->dll = g_strdup (attribute_values [i]);
-			else if (strcmp (attribute_names [i], "target") == 0){
-				char *p = strstr (attribute_values [i], "$mono_libdir");
-				if (p != NULL){
-					const char *libdir = mono_assembly_getrootdir ();
-					size_t libdir_len = strlen (libdir);
-					char *result;
-					
-					result = (char *)g_malloc (libdir_len-strlen("$mono_libdir")+strlen(attribute_values[i])+1);
-					strncpy (result, attribute_values[i], p-attribute_values[i]);
-					strcpy (result+(p-attribute_values[i]), libdir);
-					strcat (result, p+strlen("$mono_libdir"));
-					info->target = result;
-				} else 
-					info->target = g_strdup (attribute_values [i]);
-			} else if (strcmp (attribute_names [i], "os") == 0 && !arch_matches (CONFIG_OS, attribute_values [i]))
+			else if (strcmp (attribute_names [i], "target") == 0)
+				info->target = g_strdup (attribute_values [i]);
+			else if (strcmp (attribute_names [i], "os") == 0 && !arch_matches (CONFIG_OS, attribute_values [i]))
 				info->ignore = TRUE;
 			else if (strcmp (attribute_names [i], "cpu") == 0 && !arch_matches (CONFIG_CPU, attribute_values [i]))
 				info->ignore = TRUE;
