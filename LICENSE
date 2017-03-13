@@ -53,8 +53,6 @@ Class Library code
 
 These are class libraries that can be loaded by your process:
 
-* mcs/class/RabbitMQ.Client: dual licensed in Apache v2, and Mozilla Public License 1.1
-
 * mcs/class/Compat.ICSharpCode.SharpZipLib and
   mcs/class/ICSharpCode.SharpZipLib are GPL with class-path exception.
   Originates with the SharpDevelop project.

@@ -247,7 +247,6 @@ net_4_x_parallel_dirs := \
 	Mono.CodeContracts \
 	Mono.Parallel \
 	Mono.Security.Win32		\
-	Mono.Messaging.RabbitMQ		\
 	System.Dynamic			\
 	System.Windows.Forms.DataVisualization	\
 	System.Reactive.Interfaces \
@@ -271,7 +270,6 @@ net_4_x_parallel_dirs := \
 	System.Windows \
 	System.Xml.Serialization \
 	System.DirectoryServices.Protocols	\
-	RabbitMQ.Client			\
 	Microsoft.VisualC		\
 	WebMatrix.Data \
 	monodoc	\
