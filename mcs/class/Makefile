@@ -323,7 +323,6 @@ net_4_x_parallel_dirs = \
 	Mono.CodeContracts \
 	Mono.Parallel \
 	Mono.Security.Win32		\
-	Mono.Messaging.RabbitMQ		\
 	Mono.Data.Tds			\
 	System.Dynamic			\
 	System.Windows.Forms.DataVisualization	\
@@ -349,7 +348,6 @@ net_4_x_parallel_dirs = \
 	System.Windows \
 	System.Xml.Serialization \
 	System.DirectoryServices.Protocols	\
-	RabbitMQ.Client			\
 	Microsoft.VisualC		\
 	WebMatrix.Data \
 	monodoc	\
